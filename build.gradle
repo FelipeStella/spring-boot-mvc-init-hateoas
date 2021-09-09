@@ -1,0 +1,37 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.digitalinnovationone'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	//Validation
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+	//Work with Java Web
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	//Hateoas
+	implementation 'org.springframework.boot:spring-boot-starter-hateoas:2.5.4'
+	implementation 'org.springframework.plugin:spring-plugin-core:2.0.0.RELEASE'
+
+	//Work with database
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.5.4'
+
+	//H2
+	implementation 'com.h2database:h2:1.4.200'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+	useJUnitPlatform()
+}
