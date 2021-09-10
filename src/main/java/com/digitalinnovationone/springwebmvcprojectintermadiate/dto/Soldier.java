@@ -1,11 +1,13 @@
 package com.digitalinnovationone.springwebmvcprojectintermadiate.dto;
 
+import com.digitalinnovationone.springwebmvcprojectintermadiate.enums.Race;
+
 public class Soldier {
 
     private String cpf;
     private String name;
     private String weapon;
-    private String race;
+    private Race race;
     private String status;
 
     public String getCpf() {
@@ -32,11 +34,11 @@ public class Soldier {
         this.weapon = weapon;
     }
 
-    public String getRace() {
+    public Race getRace() {
         return race;
     }
 
-    public void setRace(String race) {
+    public void setRace(Race race) {
         this.race = race;
     }
 
