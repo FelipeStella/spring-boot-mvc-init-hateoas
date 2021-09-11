@@ -11,3 +11,15 @@ Um filtro é um objeto que é chamado no pré-processamento e pós-processamento
 
 No Java existem algumas bibliotecas para fazer conversão Java <-> JSON, dentre elas: Jackson, Jettison e Gson.
 O Spring por padrão utiliza o Jackson, mas é possível substituir por essas outras, caso você queira.
+
+# Binding de requisição HTTP
+
+Consiste em mapear atributos em requisições HTTP para objetos ou mapas. A forma como isso é feito depende do framework.
+
+JSF por exemplo usa tags especiais como `<h:inputText/>:`
+
+`<h:inputText value="#{userController.username}" />`
+
+<p> O exemplo acima iria mapear o campo no HTML com um atributo String username na classe UserController.
+
+Frameworks como Spring MVC ou compatíveis com JAX-RS geralmente mapeiam cada parâmetro da requisição diretamente para um atributo
