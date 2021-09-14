@@ -23,3 +23,7 @@ JSF por exemplo usa tags especiais como `<h:inputText/>:`
 <p> O exemplo acima iria mapear o campo no HTML com um atributo String username na classe UserController.
 
 Frameworks como Spring MVC ou compatíveis com JAX-RS geralmente mapeiam cada parâmetro da requisição diretamente para um atributo
+  
+# MockMVC
+  
+MockMvcé definido como um ponto de entrada principal para o teste Spring MVC do lado do servidor. Os testes com MockMvcsituam-se entre os testes de unidade e de integração.
