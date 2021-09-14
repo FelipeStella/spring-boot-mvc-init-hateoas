@@ -1,5 +1,8 @@
 package com.digitalinnovationone.springwebmvcprojectintermadiate.controller.request;
 
+import com.digitalinnovationone.springwebmvcprojectintermadiate.controller.response.SoldierResponse;
+import com.digitalinnovationone.springwebmvcprojectintermadiate.enums.Race;
+
 public class SoldierEditRequest {
 
     private String name;

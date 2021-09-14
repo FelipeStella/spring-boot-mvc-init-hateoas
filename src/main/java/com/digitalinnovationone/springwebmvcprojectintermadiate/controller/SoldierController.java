@@ -5,24 +5,19 @@ import com.digitalinnovationone.springwebmvcprojectintermadiate.controller.respo
 import com.digitalinnovationone.springwebmvcprojectintermadiate.controller.response.SoldierResponse;
 import com.digitalinnovationone.springwebmvcprojectintermadiate.dto.Soldier;
 import com.digitalinnovationone.springwebmvcprojectintermadiate.service.SoldierService;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/v1/soldier")
 public class SoldierController {
 
-    private SoldierService soldierService;
-    private ObjectMapper objectMapper;
+    private final SoldierService soldierService;
 
-    public SoldierController(SoldierService soldierService, ObjectMapper objectMapper) {
+    public SoldierController(SoldierService soldierService) {
         this.soldierService = soldierService;
-        this.objectMapper = objectMapper;
     }
 
     @GetMapping("/{id}")

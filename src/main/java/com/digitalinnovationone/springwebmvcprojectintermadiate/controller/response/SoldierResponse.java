@@ -1,5 +1,7 @@
 package com.digitalinnovationone.springwebmvcprojectintermadiate.controller.response;
 
+import com.digitalinnovationone.springwebmvcprojectintermadiate.dto.Soldier;
+import com.digitalinnovationone.springwebmvcprojectintermadiate.enums.Race;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.hateoas.RepresentationModel;
 
@@ -9,7 +11,7 @@ public class SoldierResponse extends RepresentationModel {
     private String cpf;
     private String name;
     private String weapon;
-    private String race;
+    private Race race;
     private String status;
 
     @JsonProperty("id")
@@ -46,11 +48,11 @@ public class SoldierResponse extends RepresentationModel {
         this.weapon = weapon;
     }
 
-    public String getRace() {
+    public Race getRace() {
         return race;
     }
 
-    public void setRace(String race) {
+    public void setRace(Race race) {
         this.race = race;
     }
 

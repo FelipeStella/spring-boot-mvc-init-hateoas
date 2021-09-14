@@ -28,8 +28,9 @@ dependencies {
 
 	//H2
 	implementation 'com.h2database:h2:1.4.200'
+    implementation 'junit:junit:4.13.1'
 
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 test {

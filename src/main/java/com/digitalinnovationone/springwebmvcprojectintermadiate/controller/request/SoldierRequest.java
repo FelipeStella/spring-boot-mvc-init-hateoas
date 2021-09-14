@@ -1,42 +1,23 @@
-package com.digitalinnovationone.springwebmvcprojectintermadiate.entity;
+package com.digitalinnovationone.springwebmvcprojectintermadiate.controller.request;
 
-import com.digitalinnovationone.springwebmvcprojectintermadiate.controller.response.SoldierResponse;
 import com.digitalinnovationone.springwebmvcprojectintermadiate.enums.Race;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+public class SoldierRequest {
 
-@Entity
-public class SoldierEntity {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
     private String cpf;
     private String name;
     private String weapon;
     private Race race;
     private String status;
 
-    public static SoldierEntity create() {
-        SoldierEntity soldierMock = new SoldierEntity();
-        soldierMock.setId(1L);
-        soldierMock.setCpf("839494880-49");
-        soldierMock.setName("Felipe Stella");
+    public static SoldierRequest create() {
+        SoldierRequest soldierMock = new SoldierRequest();
+        soldierMock.setCpf("839487880-49");
+        soldierMock.setName("Thais Duarte");
         soldierMock.setRace(Race.HUMANO);
         soldierMock.setStatus("alive");
-        soldierMock.setWeapon("sword");
+        soldierMock.setWeapon("shield");
         return soldierMock;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getCpf() {
